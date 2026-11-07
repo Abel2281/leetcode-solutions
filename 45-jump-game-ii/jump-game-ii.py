@@ -1,11 +1,18 @@
 class Solution:
     def jump(self, nums: list[int]) -> int:
+        n = len(nums)
         jumps = 0
-        end = 0
+        currentEnd = 0
         farthest = 0
-        for i in range(len(nums) - 1):
+
+        for i in range(n - 1):
+
             farthest = max(farthest, i + nums[i])
-            if i == end:
+
+            if i == currentEnd:
                 jumps += 1
-                end = farthest
+                currentEnd = farthest
+
         return jumps
+        
+        
