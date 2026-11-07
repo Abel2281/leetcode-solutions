@@ -5,7 +5,7 @@ class Solution:
         currentEnd = 0
         farthest = 0
 
-        for i in range(n - 1):
+        for i in range(n-1):
 
             farthest = max(farthest, i + nums[i])
 
